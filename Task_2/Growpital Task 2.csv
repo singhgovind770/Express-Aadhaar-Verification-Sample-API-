@@ -1,0 +1,119 @@
+Widget,Request Type,Base URL,API Endpoint,Payload,,Response (Success),,,,Description
+,,,,,,,,,,
+,POST,,/wallet/transaction/add,"{
+    ""amount"":
+    ""date"":
+    ""time"":
+    ""status"":
+    ""from"":{
+        ""name"":
+        ""bankName"":
+        ""IFSC"":
+        ""A/c No."":
+        ""dateTime"":
+    }
+    ""to""{
+        ""name"":
+        ""walletName"":
+        ""Ref No."":
+        ""dateTime"":
+    }
+
+    ""payment method"":
+    ""transactionId"":
+}",,"Case - 1 Transaction Completed 
+{
+    ""amount"":""15000""
+    ""date"":""12 Aug 2022""
+    ""time"":""03:55pm""
+    ""status"":""Completed""
+    ""from"":{
+        ""name"":""Saurabh Sharma""
+        ""bankName"":""SBI""
+        ""IFSC"":""SBIN016095""
+        ""A/c No."":""XXXXXXXXXX5736""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+    ""to""{
+        ""name"":""Saurabh Sharma""
+        ""walletName"":""Growpital Wallet""
+        ""Ref No."":""DBTR/222201998174""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+
+    ""payment method"":""UPI""
+    ""transactionId"":""DBTR/222201998174""
+}
+","Case - 2 Transaction Pending 
+{
+    ""amount"":""15000""
+    ""date"":""12 Aug 2022""
+    ""time"":""03:55pm""
+    ""status"":""Pending""
+    ""from"":{
+        ""name"":""Saurabh Sharma""
+        ""bankName"":""SBI""
+        ""IFSC"":""SBIN016095""
+        ""A/c No."":""XXXXXXXXXX5736""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+    ""to""{
+        ""name"":""Saurabh Sharma""
+        ""walletName"":""Growpital Wallet""
+        ""Ref No."":""DBTR/222201998174""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+
+    ""payment method"":""UPI""
+    ""transactionId"":""DBTR/222201998174""
+}
+","Case - 2 Transaction Failed 
+{
+    ""amount"":""15000""
+    ""date"":""12 Aug 2022""
+    ""time"":""03:55pm""
+    ""status"":""Failed ""
+    ""from"":{
+        ""name"":""Saurabh Sharma""
+        ""bankName"":""SBI""
+        ""IFSC"":""SBIN016095""
+        ""A/c No."":""XXXXXXXXXX5736""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+    ""to""{
+        ""name"":""Saurabh Sharma""
+        ""walletName"":""Growpital Wallet""
+        ""Ref No."":""DBTR/222201998174""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+
+    ""payment method"":""UPI""
+    ""transactionId"":""DBTR/222201998174""
+}
+",,Adding Amount in Wallet and creating Transaction 
+,,,,,,,,,,
+,GET,,/wallet/transaction/fetch,"{
+    ""transactionId""
+}",,"If transactionId is true in database return the transtransaction.
+{    ""amount"":""15000""
+    ""date"":""12 Aug 2022""
+    ""time"":""03:55pm""
+    ""status"":""Completed""
+    ""from"":{
+        ""name"":""Saurabh Sharma""
+        ""bankName"":""SBI""
+        ""IFSC"":""SBIN016095""
+        ""A/c No."":""XXXXXXXXXX5736""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+    ""to""{
+        ""name"":""Saurabh Sharma""
+        ""walletName"":""Growpital Wallet""
+        ""Ref No."":""DBTR/222201998174""
+        ""dateTime"":""12 Aug 2022, 03:55pm""
+    }
+
+    ""payment method"":""UPI""
+    ""transactionId"":""DBTR/222201998174""
+}
+",,,,Fetching Transaction Details 
