@@ -14,8 +14,8 @@ To run this API locally, you will need:
   2. Install the dependencies using `npm install`
   3. Create a `.env` file in the root directory and add the following environment variables
   
-     PORT=6001
-     DB_URL=<MongoDB Connection String>
+     - PORT=6001
+     - DB_URL=MongoDB Connection String
   
   4. Start the server by running `npm start`
   5. The server should now be running at `http://localhost:6001`
